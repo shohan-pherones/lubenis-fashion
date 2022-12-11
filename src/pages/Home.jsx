@@ -1,4 +1,5 @@
 import Categories from "../components/Categories";
+import Featured from "../components/Featured";
 import Hero from "../components/Hero";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div className="home">
       <Hero />
       <Categories />
+      <Featured />
     </div>
   );
 };

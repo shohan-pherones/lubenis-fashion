@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import NorthEastIcon from "@mui/icons-material/NorthEast";
 
 const Hero = () => {
   return (
@@ -19,7 +18,7 @@ const Hero = () => {
           to="/products"
           className="uppercase text-2xl font-medium text-cyan-500"
         >
-          Shop now <NorthEastIcon />
+          Shop now
         </Link>
       </div>
       <div className="right flex flex-col gap-5">
