@@ -6,8 +6,8 @@ const Hero = () => {
     <div className="hero container mx-auto py-10 h-[calc(100vh-5rem)] w-full grid grid-cols-8 gap-10">
       <div className="left col-span-2">
         <img
-          src="https://images.pexels.com/photos/9904582/pexels-photo-9904582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Woman in a Black Tank Top Posing Beside a Rock"
+          src="https://images.pexels.com/photos/2715287/pexels-photo-2715287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Photo of Woman With Blond Hair"
           className="w-full h-full object-cover"
         />
       </div>
