@@ -37,3 +37,7 @@ body {
 .btn:hover::after {
   width: 100%;
 }
+
+.category-shutter {
+  transition: height 1s, bottom 0.5s;
+}
