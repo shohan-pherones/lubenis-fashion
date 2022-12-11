@@ -8,21 +8,32 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-.link-item {
+.link-item,
+.btn {
   position: relative;
 }
 
-.link-item::after {
+.link-item::after,
+.btn::after {
   content: "";
   width: 0%;
-  height: 1px;
-  background-color: #374151;
   position: absolute;
   left: 0;
   bottom: 0;
   transition: 0.5s;
 }
 
-.link-item:hover::after {
+.link-item::after {
+  height: 1px;
+  background-color: #374151;
+}
+
+.btn::after {
+  height: 2px;
+  background-color: #06b6d4;
+}
+
+.link-item:hover::after,
+.btn:hover::after {
   width: 100%;
 }
