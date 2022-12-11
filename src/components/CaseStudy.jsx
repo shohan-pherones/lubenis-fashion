@@ -28,7 +28,9 @@ const CaseStudy = () => {
       <div className="details col-span-2">
         <span className="text-7xl uppercase font-semibold">
           Persona el firenzes x{" "}
-          <span className="text-cyan-500">case study' 22</span>
+          <span className="text-cyan-500">
+            case study' {new Date().getFullYear()}
+          </span>
         </span>
       </div>
       <div className="bio uppercase">

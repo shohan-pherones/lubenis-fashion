@@ -1,5 +1,6 @@
 import CaseStudy from "../components/CaseStudy";
 import Categories from "../components/Categories";
+import Fashion from "../components/Fashion";
 import Featured from "../components/Featured";
 import Hero from "../components/Hero";
 
@@ -10,6 +11,7 @@ const Home = () => {
       <Categories />
       <Featured />
       <CaseStudy />
+      <Fashion />
     </div>
   );
 };
