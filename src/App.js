@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="app bg-stone-50 text-gray-700 text-base font-normal min-h-screen">
+    <div className="app bg-stone-50 text-gray-700 min-h-screen text-base font-normal">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

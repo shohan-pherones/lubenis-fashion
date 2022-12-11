@@ -7,37 +7,3 @@
 body {
   font-family: "Raleway", sans-serif;
 }
-
-.link-item,
-.btn {
-  position: relative;
-}
-
-.link-item::after,
-.btn::after {
-  content: "";
-  width: 0%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transition: 0.5s;
-}
-
-.link-item::after {
-  height: 1px;
-  background-color: #374151;
-}
-
-.btn::after {
-  height: 2px;
-  background-color: #06b6d4;
-}
-
-.link-item:hover::after,
-.btn:hover::after {
-  width: 100%;
-}
-
-.category-shutter {
-  transition: height 1s, bottom 0.5s;
-}
