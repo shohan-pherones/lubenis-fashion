@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { currencyFormatter } from "../utilities/currencyFormatter";
 import { useFetch } from "../hooks/useFetch";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/product/productSlice";
 
 const Product = () => {
   const [quantity, setQuantity] = useState(1);
@@ -9,6 +11,8 @@ const Product = () => {
 
   const param = useParams();
   const { data, loading, error } = useFetch(`/products/${param.id}`);
+
+  const dispatch = useDispatch();
 
   return (
     <div className="product container mx-auto py-20 h-screen">
@@ -67,6 +71,7 @@ const Product = () => {
                 </span>
               </div>
               <Link
+                onClick={() => dispatch(addToCart({ ...data, quantity }))}
                 to="/cart"
                 className="uppercase text-2xl font-medium text-cyan-500"
               >
