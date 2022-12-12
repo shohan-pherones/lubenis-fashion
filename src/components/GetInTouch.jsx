@@ -7,49 +7,49 @@ const GetInTouch = () => {
         </span>
         <div className="flex gap-5 flex-1 items-start">
           <a
-            href="#"
+            href="mailto:support@lubenis.fashion.com"
             target="_blank"
-            rel="no-referrer"
+            rel="noreferrer"
             className="text-2xl uppercase border-b border-gray-700"
           >
             Facebook
           </a>
           <a
-            href="#"
+            href="mailto:support@lubenis.fashion.com"
             target="_blank"
-            rel="no-referrer"
+            rel="noreferrer"
             className="text-2xl uppercase border-b border-gray-700"
           >
             Instagram
           </a>
           <a
-            href="#"
+            href="mailto:support@lubenis.fashion.com"
             target="_blank"
-            rel="no-referrer"
+            rel="noreferrer"
             className="text-2xl uppercase border-b border-gray-700"
           >
             Twitter
           </a>
           <a
-            href="#"
+            href="mailto:support@lubenis.fashion.com"
             target="_blank"
-            rel="no-referrer"
+            rel="noreferrer"
             className="text-2xl uppercase border-b border-gray-700"
           >
             Pinterest
           </a>
           <a
-            href="#"
+            href="mailto:support@lubenis.fashion.com"
             target="_blank"
-            rel="no-referrer"
+            rel="noreferrer"
             className="text-2xl uppercase border-b border-gray-700"
           >
             TikTok
           </a>
           <a
-            href="#"
+            href="mailto:support@lubenis.fashion.com"
             target="_blank"
-            rel="no-referrer"
+            rel="noreferrer"
             className="text-2xl uppercase border-b border-gray-700"
           >
             YouTube
@@ -60,7 +60,7 @@ const GetInTouch = () => {
         <a
           href="mailto:support@lubenis.fashion.com"
           target="_blank"
-          rel="no-referrer"
+          rel="noreferrer"
           className="text-7xl text-cyan-500 border-b-4 border-cyan-500"
         >
           support@lubenis.fashion.com

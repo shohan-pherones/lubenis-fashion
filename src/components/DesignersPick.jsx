@@ -36,7 +36,7 @@ const DesignersPick = () => {
           />
           <img
             src="https://images.pexels.com/photos/2905823/pexels-photo-2905823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Photo Of Woman Tying Her hair"
+            alt="Woman Tying Her hair"
             className="w-full h-full object-cover cursor-pointer"
           />
         </div>

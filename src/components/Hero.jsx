@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BsArrowRight } from "react-icons/bs";
 
 const Hero = () => {
   return (
@@ -6,7 +7,7 @@ const Hero = () => {
       <div className="left col-span-2">
         <img
           src="https://images.pexels.com/photos/2715287/pexels-photo-2715287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Photo of Woman With Blond Hair"
+          alt="Woman With Blond Hair"
           className="w-full h-full object-cover"
         />
       </div>
@@ -16,9 +17,12 @@ const Hero = () => {
         </h1>
         <Link
           to="/products"
-          className="uppercase text-2xl font-medium text-cyan-500"
+          className="flex items-center gap-2 uppercase text-2xl font-medium text-cyan-500 self-start group"
         >
-          Shop now
+          Shop now{" "}
+          <span>
+            <BsArrowRight className="group-hover:translate-x-5 duration-500 ease-in-out" />
+          </span>
         </Link>
       </div>
       <div className="right flex flex-col gap-5">

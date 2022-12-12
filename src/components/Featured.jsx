@@ -1,112 +1,95 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useFetch } from "../hooks/useFetch";
+import { currencyFormatter } from "../utilities/currencyFormatter";
 
 const Featured = () => {
+  const [firstFeature, setFirstFeature] = useState(null);
+  const [secondFeature, setSecondFeature] = useState(null);
+  const { data } = useFetch("/products");
+
+  useEffect(() => {
+    const firstProduct = data.filter((product) => product.isFeatured).at(0);
+    const secondProduct = data.filter((product) => product.isFeatured).at(1);
+    setFirstFeature(firstProduct);
+    setSecondFeature(secondProduct);
+  }, [data]);
+
   return (
     <div className="featured container mx-auto py-20 flex flex-col gap-10">
       <div className="top flex justify-between gap-10">
         <p className="flex-[2] text-2xl uppercase">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptas
-          esse delectus ipsa enim sapiente est? Aspernatur tempore nesciunt
-          debitis unde dicta? Sed ea dolorem nisi dolore sequi, ipsa nemo?
+          Personalizing your own style is what Lubenis Fashion is all about. Get
+          access to the latest trends and designs, and match your garments with
+          our growing selection of styles.
         </p>
-        <h2 className="flex-1 uppercase text-4xl font-medium text-right">
-          Featured picks
+        <h2 className="flex-1 text-7xl uppercase font-semibold">
+          <span className="text-rose-500">Featured</span> picks
         </h2>
       </div>
       <div className="mid grid grid-cols-3 gap-10">
-        <Link to="/product/:id" className="col-span-2 flex flex-col gap-5">
-          <img
-            src="https://images.pexels.com/photos/11860595/pexels-photo-11860595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Portrait of a Woman Sitting"
-            className="w-full h-full object-cover"
-          />
-          <div>
-            <h3 className="text-2xl uppercase">
-              Skate-grip sunrise orange top & bottom set
-            </h3>
-            <p className="text-2xl text-rose-500">$19.99</p>
-          </div>
-        </Link>
-        <Link to="/product/:id" className="h-full w-full flex flex-col gap-5">
-          <img
-            src="https://images.pexels.com/photos/11311402/pexels-photo-11311402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Sexy Woman in Sunglasses Posing Outdoors"
-            className="w-full h-full object-cover"
-          />
-          <div>
-            <h3 className="text-2xl uppercase">
-              Dotline swiss black top with coat
-            </h3>
-            <p className="text-2xl text-rose-500">$24.99</p>
-          </div>
-        </Link>
+        {firstFeature && (
+          <Link
+            to={`/product/${firstFeature.id}`}
+            className="col-span-2 flex flex-col gap-5"
+          >
+            <img
+              src={firstFeature.img1}
+              alt={firstFeature.title}
+              className="w-full h-full object-cover"
+            />
+            <div>
+              <h3 className="text-2xl uppercase">{firstFeature.title}</h3>
+              <p className="text-2xl text-rose-500">
+                {currencyFormatter(firstFeature.price)}
+              </p>
+            </div>
+          </Link>
+        )}
+        {secondFeature && (
+          <Link
+            to={`/product/${secondFeature.id}`}
+            className="h-full w-full flex flex-col gap-5"
+          >
+            <img
+              src={secondFeature.img1}
+              alt={secondFeature.title}
+              className="w-full h-full object-cover"
+            />
+            <div>
+              <h3 className="text-2xl uppercase">{secondFeature.title}</h3>
+              <p className="text-2xl text-rose-500">
+                {currencyFormatter(secondFeature.price)}
+              </p>
+            </div>
+          </Link>
+        )}
       </div>
       <div className="bottom grid grid-cols-5 gap-10">
-        <Link to="/product/:id" className="h-full w-full flex flex-col gap-5">
-          <img
-            src="https://images.pexels.com/photos/11311402/pexels-photo-11311402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Sexy Woman in Sunglasses Posing Outdoors"
-            className="w-full h-full object-cover"
-          />
-          <div>
-            <h3 className="text-xl uppercase">
-              Dotline swiss black top with coat
-            </h3>
-            <p className="text-xl text-rose-500">$24.99</p>
-          </div>
-        </Link>
-        <Link to="/product/:id" className="h-full w-full flex flex-col gap-5">
-          <img
-            src="https://images.pexels.com/photos/11311402/pexels-photo-11311402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Sexy Woman in Sunglasses Posing Outdoors"
-            className="w-full h-full object-cover"
-          />
-          <div>
-            <h3 className="text-xl uppercase">
-              Dotline swiss black top with coat
-            </h3>
-            <p className="text-xl text-rose-500">$24.99</p>
-          </div>
-        </Link>
-        <Link to="/product/:id" className="h-full w-full flex flex-col gap-5">
-          <img
-            src="https://images.pexels.com/photos/11311402/pexels-photo-11311402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Sexy Woman in Sunglasses Posing Outdoors"
-            className="w-full h-full object-cover"
-          />
-          <div>
-            <h3 className="text-xl uppercase">
-              Dotline swiss black top with coat
-            </h3>
-            <p className="text-xl text-rose-500">$24.99</p>
-          </div>
-        </Link>
-        <Link to="/product/:id" className="h-full w-full flex flex-col gap-5">
-          <img
-            src="https://images.pexels.com/photos/11311402/pexels-photo-11311402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Sexy Woman in Sunglasses Posing Outdoors"
-            className="w-full h-full object-cover"
-          />
-          <div>
-            <h3 className="text-xl uppercase">
-              Dotline swiss black top with coat
-            </h3>
-            <p className="text-xl text-rose-500">$24.99</p>
-          </div>
-        </Link>
-        <Link to="/product/:id" className="h-full w-full flex flex-col gap-5">
-          <img
-            src="https://images.pexels.com/photos/11311402/pexels-photo-11311402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Sexy Woman in Sunglasses Posing Outdoors"
-            className="w-full h-full object-cover"
-          />
-          <div>
-            <h3 className="text-xl uppercase">
-              Dotline swiss black top with coat
-            </h3>
-            <p className="text-xl text-rose-500">$24.99</p>
-          </div>
-        </Link>
+        {firstFeature &&
+          data
+            ?.filter((product) => product.isFeatured)
+            .filter((product) => product.id !== firstFeature.id)
+            .filter((product) => product.id !== secondFeature.id)
+            .map((product) => (
+              <Link
+                key={product.id}
+                to={`/product/${product.id}`}
+                className=" w-full flex flex-col gap-5 h-full"
+              >
+                <img
+                  src={product.img1}
+                  alt={product.title}
+                  className="w-full object-cover h-96"
+                />
+                <div>
+                  <h3 className="text-xl uppercase">{product.title}</h3>
+                  <p className="text-xl text-rose-500">
+                    {currencyFormatter(product.price)}
+                  </p>
+                </div>
+              </Link>
+            ))}
       </div>
     </div>
   );

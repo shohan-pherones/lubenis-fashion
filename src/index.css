@@ -7,3 +7,35 @@
 body {
   font-family: "Raleway", sans-serif;
 }
+
+.link-item {
+  position: relative;
+}
+
+.link-item::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #374151;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.link-item:hover::after {
+  width: 100%;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+.category-shutter {
+  transition: height 0.5s cubic-bezier(0.87, -0.05, 0.1, 1.1),
+    top 1s cubic-bezier(0.87, -0.05, 0.1, 1.1);
+}
+
+.category-text {
+  transition-timing-function: cubic-bezier(0.87, -0.05, 0.1, 1.1);
+}

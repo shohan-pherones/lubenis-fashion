@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import auth from "../firebase.init";
 
@@ -8,6 +8,8 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/profile";
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -16,7 +18,7 @@ const SignIn = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         if (user) {
-          navigate("/profile");
+          navigate(from, { replace: true });
         }
       })
       .catch((error) => {
