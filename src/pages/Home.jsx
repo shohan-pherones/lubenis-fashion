@@ -3,6 +3,7 @@ import Categories from "../components/Categories";
 import DesignersPick from "../components/DesignersPick";
 import Fashion from "../components/Fashion";
 import Featured from "../components/Featured";
+import GetInTouch from "../components/GetInTouch";
 import Hero from "../components/Hero";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <CaseStudy />
       <Fashion />
       <DesignersPick />
+      <GetInTouch />
     </div>
   );
 };
