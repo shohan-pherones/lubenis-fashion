@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
       <img
         src={product.img1}
         alt={product.title}
-        className="w-full h-full object-cover"
+        className="w-full h-96 object-cover"
       />
       <div>
         <h3 className="text-xl uppercase">{product.title}</h3>
