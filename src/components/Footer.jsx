@@ -22,24 +22,24 @@ const Footer = () => {
       </div>
       <div className="three flex flex-col gap-1">
         <span className="mb-5 font-semibold">News</span>
-        <Link to="/products">Blogs</Link>
-        <Link to="/orders">Updates</Link>
-        <Link to="/about">Editorial pick's</Link>
-        <Link to="/contact">Turbulence FW</Link>
+        <Link to="/blogs">Blogs</Link>
+        <Link to="/updates">Updates</Link>
+        <Link to="/editorial-picks">Editorial pick's</Link>
+        <Link to="/turbulence">Turbulence FW</Link>
       </div>
       <div className="four flex flex-col gap-1">
         <span className="mb-5 font-semibold">Support</span>
-        <Link to="/products">Help center</Link>
-        <Link to="/orders">Emergency</Link>
-        <Link to="/about">Report</Link>
-        <Link to="/contact">Any query?</Link>
+        <Link to="/help">Help center</Link>
+        <Link to="/emergency">Emergency</Link>
+        <Link to="/report">Report</Link>
+        <Link to="/any-query">Any query?</Link>
       </div>
       <div className="five flex flex-col gap-1">
         <span className="mb-5 font-semibold">Privacy & policy</span>
-        <Link to="/products">Conditions</Link>
-        <Link to="/orders">Offers</Link>
-        <Link to="/about">Get career</Link>
-        <Link to="/contact">Lubenis club</Link>
+        <Link to="/conditions">Conditions</Link>
+        <Link to="/offers">Offers</Link>
+        <Link to="/career">Get career</Link>
+        <Link to="/lubenis-club">Lubenis club</Link>
       </div>
     </div>
   );
