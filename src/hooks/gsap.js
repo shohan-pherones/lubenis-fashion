@@ -83,3 +83,23 @@ export const useHeroRightImg = (items) => {
     );
   }, [items]);
 };
+
+export const useNavLink = (items) => {
+  useEffect(() => {
+    const els = items.map((item) => item.current);
+
+    gsap.fromTo(
+      els,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1.5,
+        ease: Power4.easeInOut,
+        stagger: 0.2,
+        delay: 2.5,
+      }
+    );
+  }, [items]);
+};
