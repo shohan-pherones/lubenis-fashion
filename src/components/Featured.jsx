@@ -18,7 +18,7 @@ const Featured = () => {
   return (
     <div className="featured container mx-auto py-20 flex flex-col gap-10">
       <div className="top flex justify-between gap-10">
-        <p className="flex-[2] text-2xl uppercase">
+        <p className="flex-[2] text-2xl">
           Personalizing your own style is what Lubenis Fashion is all about. Get
           access to the latest trends and designs, and match your garments with
           our growing selection of styles.
@@ -31,13 +31,16 @@ const Featured = () => {
         {firstFeature && (
           <Link
             to={`/product/${firstFeature.id}`}
-            className="col-span-2 flex flex-col gap-5"
+            className="col-span-2 flex flex-col gap-5 relative group"
           >
             <img
               src={firstFeature.img1}
               alt={firstFeature.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:brightness-50 duration-500"
             />
+            <span className="uppercase h-40 w-40 bg-black rounded-full absolute top-1/2 left-1/2 flex justify-center items-center text-4xl text-white -translate-x-[50%] opacity-0 group-hover:opacity-100 duration-500 z-[1]">
+              View
+            </span>
             <div>
               <h3 className="text-2xl uppercase">{firstFeature.title}</h3>
               <p className="text-2xl text-rose-500">
@@ -49,13 +52,16 @@ const Featured = () => {
         {secondFeature && (
           <Link
             to={`/product/${secondFeature.id}`}
-            className="h-full w-full flex flex-col gap-5"
+            className="h-full w-full flex flex-col gap-5 relative group"
           >
             <img
               src={secondFeature.img1}
               alt={secondFeature.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:brightness-50 duration-500"
             />
+            <span className="uppercase h-40 w-40 bg-black rounded-full absolute top-1/2 left-1/2 flex justify-center items-center text-4xl text-white -translate-x-[50%] opacity-0 group-hover:opacity-100 duration-500 z-[1]">
+              View
+            </span>
             <div>
               <h3 className="text-2xl uppercase">{secondFeature.title}</h3>
               <p className="text-2xl text-rose-500">
@@ -75,13 +81,16 @@ const Featured = () => {
               <Link
                 key={product.id}
                 to={`/product/${product.id}`}
-                className=" w-full flex flex-col gap-5 h-full"
+                className="w-full flex flex-col gap-5 h-full relative group"
               >
                 <img
                   src={product.img1}
                   alt={product.title}
-                  className="w-full object-cover h-96"
+                  className="w-full object-cover h-96 group-hover:brightness-50 duration-500"
                 />
+                <span className="uppercase h-24 w-24 border rounded-full absolute top-1/2 left-1/2 flex justify-center items-center text-xl text-white -translate-x-[50%] -translate-y-[50%] opacity-0 group-hover:opacity-100 duration-500 z-[1] hover:bg-white hover:text-black">
+                  View
+                </span>
                 <div>
                   <h3 className="text-xl uppercase">{product.title}</h3>
                   <p className="text-xl text-rose-500">
